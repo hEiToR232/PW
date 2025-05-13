@@ -1,6 +1,6 @@
 package br.com.etechoracio.livraria.model;
 
-public class Kindle extends Livro{
+public class Kindle extends Livro implements Promocional{
     private String dono;
 
     @Override
@@ -10,5 +10,10 @@ public class Kindle extends Livro{
     @Override
     public void exibirDetalhes() {
         System.out.println("Dono: "+ dono);
+    }
+
+    @Override
+    public void aplicarDesconto() {
+        preco = preco -2;
     }
 }

@@ -1,0 +1,31 @@
+- Criar a classe AudioBook que herda de Livro com os atributos:
+	- duração : LocalTime
+	- narrador: String
+
+- Implemente a sobrescrita do método exibirDetalhes.
+
+- Na classe de teste instacie um objeto do tipo Áudio book com
+duração e narrador além dos outros atributos, e chame o 
+método exibir().
+
+- Criar a enumeração QualidadeAudioEnum no pacote enums
+com os valores HD e ULTRA_HD.
+
+- Acrescentar o atributo ao AudioBook:
+	- qualidade: QualidadeAudioEnum
+
+- Criar o método abstrato na classe Livro:
+	public abstract double getPrecoTotal();
+
+- Implemente o método getPrecoTotal() nas subclasses:
+	- Kindle -> retorna o preco
+	- LivroImpresso -> retorna o preco com frete de 10%
+	- AudioBook -> se qualidade for ULTRA_HD, retorna o
+	  preco com acréscimo de 15%
+
+- No método exibir() de Livro, acrescente a exibição do preço total
+
+
+
+
+

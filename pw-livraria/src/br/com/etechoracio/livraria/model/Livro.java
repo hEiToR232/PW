@@ -2,7 +2,7 @@ package br.com.etechoracio.livraria.model;
 
 import br.com.etechoracio.livraria.enums.TipoCapaEnum;
 
-public abstract class Livro {
+public abstract class Livro implements Exemplar{
     //tipo nomeAtributo
     private String titulo;
     private String autor;
@@ -60,5 +60,12 @@ public abstract class Livro {
     public double getTempoLeitura() {
         return paginas * 2.5;
     }
+
+    public boolean ehMaisCaroQue(Livro outroLivro){
+        return preco > outroLivro.preco;
+    }
+
+
+
 
 }

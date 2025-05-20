@@ -25,9 +25,9 @@ public abstract class Livro implements Exemplar{
         System.out.println("Título: " + titulo);
         System.out.println("Autor: " + autor);
         System.out.println("Preço: " + preco);
-        System.out.println("Numero de Paginas: " + paginas);
+        System.out.println("Número de paginas: " + paginas);
         exibirDetalhes();
-        System.out.println("--------------------------");
+        System.out.println("----------------------");
         //System.out.println("Tipo de capa: " + tipoCapa);
         //System.out.println("Frete: " + calcularFrete());
     }
@@ -64,8 +64,5 @@ public abstract class Livro implements Exemplar{
     public boolean ehMaisCaroQue(Livro outroLivro){
         return preco > outroLivro.preco;
     }
-
-
-
 
 }

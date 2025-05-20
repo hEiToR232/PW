@@ -4,10 +4,8 @@ import br.com.etechoracio.livraria.enums.TipoCapaEnum;
 import br.com.etechoracio.livraria.model.*;
 
 import java.sql.SQLOutput;
-import java.time.LocalTime;
 
 public class TesteLivros {
-
     public static void main(String[] args) {
         //Passar o nome OU passar o nome e o site???
         Editora rocco = new Editora("Rocco");
@@ -24,28 +22,26 @@ public class TesteLivros {
 
         LivroImpresso segundoLivro = new LivroImpresso();
         segundoLivro.setTitulo("UML 2.0");
-        segundoLivro.setPreco(21.65);
+        segundoLivro.setPreco(50.00);
         segundoLivro.exibir();
 
-        LocalTime tempo = LocalTime.now();
-        AudioBook terceiroLivro = new AudioBook();
-        terceiroLivro.setTitulo("Corinthians");
-        terceiroLivro.setAutor("Socrates");
-        terceiroLivro.setPreco(12.54);
-        terceiroLivro.setNarrador("Yuri Alberto");
-        terceiroLivro.exibir();
+        if (primeiroLivro.ehMaisCaroQue(segundoLivro))
+            System.out.println(primeiroLivro.getTitulo() +
+                    " é mais caro que " + segundoLivro.getTitulo());
 
         Revista revista = new Revista();
-        revista.setPreco(10.99);
-
-        if (primeiroLivro.ehMaisCaroQue(segundoLivro))
-            System.out.println(primeiroLivro.getTitulo() + " é mais caro que " + segundoLivro.getTitulo());
+        revista.setTitulo("Revista1");
+        revista.setEditora(novatec);
+        revista.setPreco(30);
 
         Carrinho carrinho = new Carrinho();
         carrinho.adicionar(primeiroLivro);
         carrinho.adicionar(segundoLivro);
-        carrinho.adicionar(terceiroLivro);
-        System.out.println("Valor total de " + carrinho.getValorTotal());
+        carrinho.adicionar(revista);
+        System.out.println("Valor total da compra: " +
+                carrinho.getValorTotal());
+
+
     }
 
 }

@@ -1,12 +1,25 @@
 package br.com.etechoracio.livraria.model;
 
 public class Revista implements Exemplar, Promocional{
-    private String nome;
+    private String titulo;
     private Editora editora;
     private double preco;
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    @Override
+    public double getPreco() {
+        return preco;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public Editora getEditora() {
+        return editora;
     }
 
     public void setEditora(Editora editora) {
@@ -18,12 +31,7 @@ public class Revista implements Exemplar, Promocional{
     }
 
     @Override
-    public double getPreco() {
-        return preco;
-    }
-
-    @Override
-    public void aplicarDesconto() {
-        preco -= preco * 0.15;
+    public void aplicarDesconto(Desconto desconto) {
+        preco = desconto.aplicar(preco);
     }
 }

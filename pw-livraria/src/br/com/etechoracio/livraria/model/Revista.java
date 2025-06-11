@@ -1,6 +1,10 @@
 package br.com.etechoracio.livraria.model;
 
-public class Revista implements Exemplar, Promocional{
+import br.com.etechoracio.livraria.interfaces.Desconto;
+import br.com.etechoracio.livraria.interfaces.Exemplar;
+import br.com.etechoracio.livraria.interfaces.Promocional;
+
+public class Revista implements Exemplar, Promocional {
     private String titulo;
     private Editora editora;
     private double preco;

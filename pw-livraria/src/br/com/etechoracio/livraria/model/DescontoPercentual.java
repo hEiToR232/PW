@@ -1,5 +1,7 @@
 package br.com.etechoracio.livraria.model;
 
+import br.com.etechoracio.livraria.interfaces.Desconto;
+
 public class DescontoPercentual implements Desconto {
 
     private double percentual;

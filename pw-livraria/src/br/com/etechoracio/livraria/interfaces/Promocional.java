@@ -1,4 +1,4 @@
-package br.com.etechoracio.livraria.model;
+package br.com.etechoracio.livraria.interfaces;
 
 public interface Promocional {
 

@@ -1,6 +1,8 @@
 package br.com.etechoracio.livraria.model;
 
 import br.com.etechoracio.livraria.enums.TipoCapaEnum;
+import br.com.etechoracio.livraria.interfaces.Desconto;
+import br.com.etechoracio.livraria.interfaces.Promocional;
 
 public class LivroImpresso extends Livro implements Promocional {
     private TipoCapaEnum tipoCapa;

@@ -1,6 +1,9 @@
 package br.com.etechoracio.livraria.model;
 
-public class Kindle extends Livro implements Promocional{
+import br.com.etechoracio.livraria.interfaces.Desconto;
+import br.com.etechoracio.livraria.interfaces.Promocional;
+
+public class Kindle extends Livro implements Promocional {
     private String dono;
 
     @Override

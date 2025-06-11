@@ -1,5 +1,8 @@
 package br.com.etechoracio.livraria.model;
 
+import br.com.etechoracio.livraria.interfaces.Exemplar;
+import br.com.etechoracio.livraria.interfaces.Promocional;
+
 public class Carrinho {
     private double valorTotal;
 
